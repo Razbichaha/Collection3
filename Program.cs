@@ -40,9 +40,10 @@ namespace Collection3
                         break;
                     default:
 
-                        if(inputString!="")
+                        int tempNumber;
+                        if(int.TryParse(inputString, out tempNumber))
                         {
-                            listOfNumbers.Add(Convert.ToInt32(inputString));
+                            listOfNumbers.Add(tempNumber);
                         }
 
                         break;
