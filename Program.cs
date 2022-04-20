@@ -21,16 +21,7 @@ namespace Collection3
                 {
                     case "sum":
 
-                        int sum = 0;
-
-                        foreach (int number in listOfNumbers)
-                        {
-                            sum += number;
-                        }
-
-                        Console.WriteLine("Сумма набранных чисел = " + sum);
-
-                        listOfNumbers.Clear();
+                        SumOfNumber(listOfNumbers);
 
                         break;
                     case "exit":
@@ -41,7 +32,6 @@ namespace Collection3
                     default:
 
                         int tempNumber;
-
                         if(int.TryParse(inputString, out tempNumber))
                         {
                             listOfNumbers.Add(tempNumber);
@@ -51,5 +41,24 @@ namespace Collection3
                 }
             }
         }
+
+        static int SumOfNumber(List<int> listOfNumbers)
+        {
+            int temp = 0;
+            int sum = 0;
+
+            foreach (int number in listOfNumbers)
+            {
+                sum += number;
+            }
+
+            Console.WriteLine("Сумма набранных чисел = " + sum);
+
+            listOfNumbers.Clear();
+
+
+            return temp;
+        }
+
     }
 }
