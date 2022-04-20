@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Collection3
 {
@@ -15,11 +16,46 @@ namespace Collection3
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите любое число и я его запомню\nвведите sum - сложение введеных чисел\nвведите exit - закрытие программы\n");
 
+            bool continueCycle = true;
+            List<int> temp = new List<int>();
 
+            while (continueCycle)
+            {
+                string inputString = Console.ReadLine();
 
+                switch (inputString)
+                {
+                    case "sum":
 
-            Console.WriteLine("Hello World!");
+                        int sum = 0;
+
+                        foreach (int number in temp)
+                        {
+                            sum += number;
+                        }
+
+                        Console.WriteLine("Сумма набранных чисел = " + sum);
+
+                        temp.Clear();
+
+                        break;
+                    case "exit":
+
+                        continueCycle = false;
+
+                        break;
+                    default:
+
+                        if(inputString!="")
+                        {
+                            temp.Add(Convert.ToInt32(inputString));
+                        }
+
+                        break;
+                }
+            }
         }
     }
 }
