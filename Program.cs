@@ -41,6 +41,7 @@ namespace Collection3
                     default:
 
                         int tempNumber;
+
                         if(int.TryParse(inputString, out tempNumber))
                         {
                             listOfNumbers.Add(tempNumber);
