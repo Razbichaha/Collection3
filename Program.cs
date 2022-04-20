@@ -21,7 +21,7 @@ namespace Collection3
                 {
                     case "sum":
 
-                        SumOfNumber(listOfNumbers);
+                        SummNumber(listOfNumbers);
 
                         break;
                     case "exit":
@@ -42,9 +42,9 @@ namespace Collection3
             }
         }
 
-        static int SumOfNumber(List<int> listOfNumbers)
+        static void SummNumber(List<int> listOfNumbers)
         {
-            int temp = 0;
+           
             int sum = 0;
 
             foreach (int number in listOfNumbers)
@@ -55,9 +55,6 @@ namespace Collection3
             Console.WriteLine("Сумма набранных чисел = " + sum);
 
             listOfNumbers.Clear();
-
-
-            return temp;
         }
 
     }
